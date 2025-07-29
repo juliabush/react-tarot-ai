@@ -1,5 +1,13 @@
+.website-container {
+  place-self: center;
+}
 .cardDisplay-container {
   width: 60px;
   height: 80px;
   background-color: pink;
+}
+.cardDisplay-flexbox {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
