@@ -1,6 +1,24 @@
 import { useState } from "react";
 import "./App.css";
 
-function App() {}
+function CardDisplay() {
+  return (
+    <div className="cardDisplay-container">
+      <h1>hello</h1>
+    </div>
+  );
+}
+function TarotUserInput() {
+  return <form id="tarotUserInput-form" action=""></form>;
+}
 
-export default App;
+function App() {
+  return (
+    <div>
+      <CardDisplay />
+      <TarotUserInput />
+    </div>
+  );
+}
+
+export { App };
