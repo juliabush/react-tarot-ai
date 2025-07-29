@@ -17,17 +17,23 @@ function TarotUserInput() {
         id="tarotUserInput-input"
         required
       />
-      <button></button>
-      <button></button>
+      <button type="submit" id="tarotUserInput-submitbutton"></button>
+      <button className="tarotUerInput-instructionsbutton"></button>
     </form>
   );
 }
 
 function App() {
   return (
-    <div>
-      <CardDisplay />
+    <div className="website-container">
       <TarotUserInput />
+      <div className="cardDisplay-container">
+        <div className="cardDisplay-flexbox">
+          <CardDisplay />
+          <CardDisplay />
+          <CardDisplay />
+        </div>
+      </div>
     </div>
   );
 }
