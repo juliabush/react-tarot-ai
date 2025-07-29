@@ -2,11 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function CardDisplay() {
-  return (
-    <div className="cardDisplay-container">
-      <h1>hello</h1>
-    </div>
-  );
+  return <div className="cardDisplay-container"></div>;
 }
 function TarotUserInput() {
   return (
