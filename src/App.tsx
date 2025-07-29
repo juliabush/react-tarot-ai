@@ -9,7 +9,18 @@ function CardDisplay() {
   );
 }
 function TarotUserInput() {
-  return <form id="tarotUserInput-form" action=""></form>;
+  return (
+    <form id="tarotUserInput-form" action="">
+      <input
+        type="text"
+        placeholder="input your question here..."
+        id="tarotUserInput-input"
+        required
+      />
+      <button></button>
+      <button></button>
+    </form>
+  );
 }
 
 function App() {
