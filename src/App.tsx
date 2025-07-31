@@ -1,7 +1,5 @@
 import { useState } from "react";
-// import {} from "./assets/Tarot_00_Fool.webp";
-// import {} from "./assets/2nd card.webp";
-// import {} from "./assets/Tarot_03_Empress.webp";
+
 import "./App.css";
 
 function CardDisplay() {
