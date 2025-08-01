@@ -1,10 +1,11 @@
 .website-container {
+  display: grid;
+  height: 100%;
   place-self: center;
 }
-.cardDisplay-container {
-  width: 120px;
-  height: 120px;
-  background-color: pink;
+.cardDisplay img {
+  width: 260px;
+  height: 360px;
 }
 .cardDisplay-flexbox {
   display: flex;

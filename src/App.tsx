@@ -1,12 +1,13 @@
 import { useState } from "react";
-
+import tarot0 from "./assets/Tarot_00_Fool.webp";
+import tarot1 from "./assets/2nd card.webp";
+import tarot2 from "./assets/Tarot_03_Empress.webp";
 import "./App.css";
 
 function CardDisplay() {
   return (
-    <div className="cardDisplay-container">
-      <h1>hello</h1>
-      <img src="" alt="" />
+    <div className="cardDisplay">
+      <img src={tarot0} alt="" />
     </div>
   );
 }
