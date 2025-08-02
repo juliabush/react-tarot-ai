@@ -10,6 +10,7 @@ function CardDisplay() {
       <img src={tarot0} alt="" />
     </div>
   );
+  // great
 }
 function TarotUserInput() {
   return (
