@@ -1,9 +1,11 @@
-import OpenAI from "openai";
-const client = new OpenAI();
+const express = require("express");
+const app = express();
+import { config } from "./.gitignore/.env";
+config();
 
-const response = await client.responses.create({
-  model: "gpt-4.1",
-  input: "Write a one-sentence bedtime story about a unicorn.",
+app.get("/", (req, res) => res.send("Hello"));
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(process.env.API_URL);
 });
-
-console.log(response.output_text);
