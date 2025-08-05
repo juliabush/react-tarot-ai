@@ -11,4 +11,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(process.env.API_KEY);
 });
-// hello

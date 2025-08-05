@@ -4,13 +4,15 @@ import tarot1 from "./assets/2nd card.webp";
 import tarot2 from "./assets/Tarot_03_Empress.webp";
 import "./App.css";
 
+function WebsiteTitle() {
+  return <h1>Ask Tarot AI anything</h1>;
+}
 function CardDisplay() {
   return (
     <div className="cardDisplay">
       <img src={tarot0} alt="" />
     </div>
   );
-  // great
 }
 function TarotUserInput() {
   return (
@@ -22,7 +24,7 @@ function TarotUserInput() {
         required
       />
       <button type="submit" id="tarotUserInput-submitbutton"></button>
-      <button className="tarotUerInput-instructionsbutton"></button>
+      <button className="tarotUserInput-instructionsbutton"></button>
     </form>
   );
 }
@@ -30,14 +32,15 @@ function TarotUserInput() {
 function App() {
   return (
     <div className="website-container">
+      <WebsiteTitle />
       <TarotUserInput />
-      <div className="cardDisplay-container">
+      <span className="cardDisplay-container">
         <div className="cardDisplay-flexbox">
           <CardDisplay />
           <CardDisplay />
           <CardDisplay />
         </div>
-      </div>
+      </span>
     </div>
   );
 }

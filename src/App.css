@@ -1,14 +1,38 @@
 .website-container {
   display: grid;
   height: 100%;
-  place-self: center;
+  width: 100%;
 }
 .cardDisplay img {
   width: 260px;
   height: 360px;
+  border-radius: 1rem;
 }
 .cardDisplay-flexbox {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 5rem;
+}
+#tarotUserInput-form {
+  display: flex;
+  place-content: center;
+  padding: 8rem;
+}
+#tarotUserInput-input {
+  padding: 1rem;
+}
+.tarotUserInput-instructionsbutton,
+#tarotUserInput-submitbutton {
+  width: 80px;
+  height: 80px;
+}
+.tarotUserInput-instructionsbutton {
+  background-color: red;
+}
+.cardDisplay-container {
+  display: flex;
+  place-content: center;
+  background-color: blueviolet;
+  padding: 1.5rem;
+  width: 100%;
 }
