@@ -3,12 +3,11 @@
   height: 100%;
   width: 100%;
 }
-.cardDisplay img {
-  width: 260px;
-  height: 360px;
-  border-radius: 1rem;
-}
+/* .active {
+  display: visible;
+} */
 .cardDisplay-flexbox {
+  position: absolute;
   display: flex;
   flex-direction: row;
   gap: 5rem;
@@ -33,6 +32,14 @@
   display: flex;
   place-content: center;
   background-color: blueviolet;
-  padding: 1.5rem;
+  padding-bottom: 25%;
   width: 100%;
+}
+img {
+  width: 260px;
+  height: 360px;
+  border-radius: 1rem;
+}
+.active {
+  display: none;
 }

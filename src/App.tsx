@@ -1,30 +1,28 @@
-import { useState } from "react";
-import tarot0 from "./assets/Tarot_00_Fool.webp";
-import tarot1 from "./assets/2nd card.webp";
-import tarot2 from "./assets/Tarot_03_Empress.webp";
+import { useEffect, useState } from "react";
+
 import "./App.css";
 
 function WebsiteTitle() {
-  return <h1>Ask Tarot AI anything</h1>;
+  return <h1 className="websitetitle-title">Ask Tarot AI anything</h1>;
 }
 function CardDisplay() {
-  return (
-    <div className="cardDisplay">
-      <img src={tarot0} alt="" />
-    </div>
-  );
+  return <div className="cardDisplay"></div>;
 }
 function TarotUserInput() {
   return (
-    <form id="tarotUserInput-form" action="">
+    <form id="tarotUserInput-form" action="POST">
       <input
         type="text"
         placeholder="input your question here..."
         id="tarotUserInput-input"
         required
       />
-      <button type="submit" id="tarotUserInput-submitbutton"></button>
-      <button className="tarotUserInput-instructionsbutton"></button>
+      <button type="submit" id="tarotUserInput-submitbutton">
+        Submit
+      </button>
+      <button className="tarotUserInput-instructionsbutton">
+        Instructions
+      </button>
     </form>
   );
 }
