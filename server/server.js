@@ -1,9 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import OpenAI from "openai";
-const client = new OpenAI({ apiKey: "API_KEY" });
-
 dotenv.config();
+const client = new OpenAI({ apiKey: process.env.API_KEY });
 
 const app = express();
 
@@ -18,4 +17,3 @@ const response = await client.responses.create({
 });
 
 console.log(response.output_text);
-console.log(dog);
