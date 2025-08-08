@@ -8,13 +8,14 @@ function WebsiteTitle() {
 function CardDisplay() {
   return <div className="cardDisplay"></div>;
 }
+
 function TarotUserInput() {
   return (
     <form id="tarotUserInput-form" action="POST">
       <input
         type="text"
         placeholder="input your question here..."
-        id="tarotUserInput-input"
+        id="tarotUserInput"
         required
       />
       <button type="submit" id="tarotUserInput-submitbutton">
