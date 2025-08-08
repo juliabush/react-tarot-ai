@@ -27,6 +27,9 @@ function TarotUserInput() {
     </form>
   );
 }
+const sendTarotInput = await fetch("http://localhost:3000/userinput", {
+  method: "POST",
+});
 
 function App() {
   return (
