@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import OpenAI from "openai";
-const client = new OpenAI();
+const client = new OpenAI({ apiKey: "API_KEY" });
 
 dotenv.config();
 
@@ -10,9 +10,7 @@ const app = express();
 app.get("/", (req, res) => res.send("Hello"));
 
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(process.env.API_KEY);
-});
+app.listen(PORT, () => {});
 
 const response = await client.responses.create({
   model: "gpt-5",
