@@ -27,15 +27,15 @@ function TarotUserInput() {
     </form>
   );
 }
-const sendTarotInput = await fetch("http://localhost:3000/userinput", {
-  method: "POST",
-});
 
 function App() {
+  const sendingUserInput = await fetch("https://http://localhost:5173/post", {
+  method: "POST",
+})
   return (
     <div className="website-container">
       <WebsiteTitle />
-      <TarotUserInput />
+       <TarotUserInput />
       <span className="cardDisplay-container">
         <div className="cardDisplay-flexbox">
           <CardDisplay />
