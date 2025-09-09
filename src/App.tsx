@@ -29,9 +29,6 @@ function TarotUserInput() {
 }
 
 function App() {
-  const sendingUserInput = await fetch("https://http://localhost:5173/post", {
-  method: "POST",
-})
   return (
     <div className="website-container">
       <WebsiteTitle />
@@ -46,5 +43,7 @@ function App() {
     </div>
   );
 }
+  
+
 
 export { App };

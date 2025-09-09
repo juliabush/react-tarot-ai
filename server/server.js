@@ -8,6 +8,9 @@ const client = new OpenAI({ apiKey: process.env.API_KEY });
 
 const app = express();
 
+const cors = require("cors");
+app.use(cors());
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // const response = await client.responses.create({
