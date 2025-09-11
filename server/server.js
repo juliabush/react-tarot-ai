@@ -8,8 +8,6 @@ import OpenAI from "openai";
 dotenv.config();
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-console.log("OPENAI_API_KEY is", process.env.OPENAI_API_KEY);
-
 
 const app = express();
 
@@ -19,15 +17,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json());
 
-// const response = await client.responses.create({
-//   model: "gpt-5",
-//   input: "Write a short bedtime story about a unicorn.",
-// });
-// // console.log(response.output_text);
-
 app.post("/api/tarot", async (req, res) => {
   const question = req.body.question;
-  return console.log("Recieved tarot question", question);
+  console.log("Received tarot question:", question);
+
+  try {
+    const completion = await client.chat.completions.create({
+      model: "gpt-4",
+      messages: [
+        { role: "user", content: question }
+      ],
+    });
+
+    const answer = completion.choices[0].message.content;
+
+    res.status(200).json({ tarotReading: answer });
+  } catch (error) {
+    console.error("Error generating tarot reading:", error);
+    res.status(500).json({ error: "Failed to get tarot reading" });
+  }
 });
 
 const PORT = 5000;
