@@ -3,15 +3,19 @@ import dotenv from "dotenv";
 import cors from "cors";
 import bodyParser from "body-parser";
 import OpenAI from "openai";
+
+
 dotenv.config();
+
 const client = new OpenAI({ apiKey: process.env.API_KEY });
 
 const app = express();
 
-const cors = require("cors");
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.json());
 
 // const response = await client.responses.create({
 //   model: "gpt-5",
@@ -19,12 +23,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // });
 // // console.log(response.output_text);
 
-app.post("/userinput", (req, res) => {
-  const tarotinput = req.body.tarotUserInput;
-  return console.log(tarotinput);
+app.post("/api/tarot", async (req, res) => {
+  const question = req.body.question;
+  return console.log("Recieved tarot question", question);
 });
 
-const PORT = 3000;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log("hello");
   // this console.log displays in vs code terminal
