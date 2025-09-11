@@ -12,19 +12,39 @@ function CardDisplay() {
 function TarotUserInput() {
   const [userInput, setUserInput] = useState("");
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:5000/api/tarot", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ question: userInput }),
+      });
+
+      const data = await response.json();
+      console.log("Server response:", data);
+    } catch (err) {
+      console.error("Error sending data:", err);
+    }
+  };
 
   return (
-    <form id="tarotUserInput-form" action="POST">
+    <form id="tarotUserInput-form" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="input your question here..."
         id="tarotUserInput"
+        value={userInput}
+        onChange={(e) => setUserInput(e.target.value)}
         required
       />
       <button type="submit" id="tarotUserInput-submitbutton">
         Submit
       </button>
-      <button className="tarotUserInput-instructionsbutton">
+      <button type="button" className="tarotUserInput-instructionsbutton" onClick={() => alert("Ask a clear question and find out what tarot thinks...")}>
         Instructions
       </button>
     </form>
