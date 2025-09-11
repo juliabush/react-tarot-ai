@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+import { useState } from "react"
 
 import "./App.css";
 
@@ -10,6 +10,9 @@ function CardDisplay() {
 }
 
 function TarotUserInput() {
+  const [userInput, setUserInput] = useState("");
+
+
   return (
     <form id="tarotUserInput-form" action="POST">
       <input
