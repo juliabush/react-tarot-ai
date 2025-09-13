@@ -3,7 +3,9 @@ import { useState } from "react"
 import "./App.css";
 
 function WebsiteTitle() {
-  return <h1 className="websitetitle-title">Ask Tarot AI anything</h1>;
+  return (
+  <h1 className="websitetitle-title">Ask Tarot AI Anything</h1>
+  );
 }
 function CardDisplay() {
   return <div className="cardDisplay"></div>;
@@ -44,10 +46,10 @@ function TarotUserInput() {
         required
       />
       <button type="submit" id="tarotUserInput-submitbutton">
-        Submit
+        &#x27A1;
       </button>
       <button type="button" className="tarotUserInput-instructionsbutton" onClick={() => alert("Ask a clear question and find out what tarot thinks...")}>
-        Instructions
+      &#x1F4CB;
       </button>
     </form>
   );

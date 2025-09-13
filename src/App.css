@@ -1,7 +1,17 @@
 .website-container {
-  display: grid;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 100%;
+}
+.websitetitle-title {
+  display: flex;
+  padding-top: 8rem;
+  font-size: 3.25rem;
+  place-content: center;
+font-family: "Open Sans";
+color: rgb(15, 15, 15);
+text-shadow: 2px 2px 8px rgb(180, 68, 214);
 }
 /* .active {
   display: visible;
@@ -15,25 +25,36 @@
 #tarotUserInput-form {
   display: flex;
   place-content: center;
-  padding: 8rem;
+  padding: 4rem;
+  padding-bottom: 8rem;
+
+}
+#tarotUserInput {
+width: 500px;
+border-radius: 3rem;
+padding-left: 2.5rem;
 }
 #tarotUserInput-input {
   padding: 1rem;
+  width: 200px;
 }
 .tarotUserInput-instructionsbutton,
 #tarotUserInput-submitbutton {
   width: 80px;
   height: 80px;
+  border-radius: 50%;
 }
 .tarotUserInput-instructionsbutton {
   background-color: red;
 }
+
 .cardDisplay-container {
-  display: flex;
-  place-content: center;
-  background-color: blueviolet;
-  padding-bottom: 25%;
+  margin-top: auto; /* Push to the bottom */
+  background-color: rgb(25, 15, 34);
   width: 100%;
+  display: flex;
+  justify-content: flex-end; /* or whatever alignment you want */
+  padding: 18%; /* Instead of 20% */
 }
 img {
   width: 260px;
