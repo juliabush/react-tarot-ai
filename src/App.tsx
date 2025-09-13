@@ -17,8 +17,6 @@ function TarotUserInput() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log(userInput)
-
     try {
       const response = await fetch("http://localhost:5000/api/tarot", {
         method: "POST",
